@@ -11,7 +11,6 @@ int input(long long sorted[MAX_SIZE_OF_ARRAY_SORT], long long not_sorted[MAX_SIZ
 	long long buffer; 
 	int value_of_numbers_for_sort = 0;
 	for (int i = 0; i < MAX_SIZE_OF_ARRAY_SORT; i++) {
-		int included_in_interval = 0;
 		scanf("%lld%c", &buffer, &space);
 		if (from_count == 1 && buffer <= from_value) 
 			fprintf(stdout,"%lld ", buffer);
