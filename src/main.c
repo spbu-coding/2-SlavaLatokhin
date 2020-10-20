@@ -12,10 +12,12 @@ int input(long long sorted[MAX_SIZE_OF_ARRAY_SORT], long long not_sorted[MAX_SIZ
 	int value_of_numbers_for_sort = 0;
 	for (int i = 0; i < MAX_SIZE_OF_ARRAY_SORT; i++) {
 		scanf("%lld%c", &buffer, &space);
-		if (from_count == 1 && buffer <= from_value) 
-			fprintf(stdout,"%lld ", buffer);
-		else if (to_count == 1 && buffer >= to_value) 
-			fprintf(stderr,"%lld ", buffer);
+		if ((from_count == 1 && buffer <= from_value) || (to_count == 1 && buffer >= to_value)) {
+			if (from_count == 1 && buffer <= from_value) 
+				fprintf(stdout,"%lld ", buffer);
+			if (to_count == 1 && buffer >= to_value) 
+				fprintf(stderr,"%lld ", buffer);
+		}
 		else {
 			sorted[value_of_numbers_for_sort] = buffer;
 			not_sorted[value_of_numbers_for_sort] = buffer;
