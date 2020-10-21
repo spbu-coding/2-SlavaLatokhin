@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
 		}
 	}
 	if (from_count > 1 || to_count > 1) return -3;
-	if (from_count == 0 && to_count > 1) return -4;
+	if (from_count == 0 && to_count == 0) return -4;
 	long long sorted[MAX_SIZE_OF_ARRAY_SORT];
 	long long not_sorted[MAX_SIZE_OF_ARRAY_SORT];
 	int value_of_numbers_for_sort = input(sorted, not_sorted, from_count, to_count, from_value, to_value);
